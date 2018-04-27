@@ -11804,7 +11804,7 @@ div#notebook {
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="Answer-to-Q2(1)">Answer to Q2(1)<a class="anchor-link" href="#Answer-to-Q2(1)">&#182;</a></h3><p>The associative rule for addtion doesn't hold for x = 0.1, y = 0.1 and z = 1.0. This is because that if a number doesn't have an exact floating-point representation, Julia rounded it to an appropriate representable value. The following shows the bit representation of real numbers and why the associative rule doesn't hold.</p>
+<h3 id="Answer-to-Q2(1)">Answer to Q2(1)<a class="anchor-link" href="#Answer-to-Q2(1)">&#182;</a></h3><p>The associative rule for addtion doesn't hold. The following shows an example when x = 0.1, y = 0.1 and z = 1.0. This is because that if a number doesn't have an exact floating-point representation, Julia rounds it to an appropriate representable value. The following shows the bit representation of real numbers and why the associative rule doesn't hold.</p>
 
 </div>
 </div>
@@ -11942,7 +11942,7 @@ false
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="Answer-to-Q2(3)">Answer to Q2(3)<a class="anchor-link" href="#Answer-to-Q2(3)">&#182;</a></h3><p>No. The following shows one case that the distributive rule doesn't hold when x = 1/3, y = 0.1 and a = 10.0</p>
+<h3 id="Answer-to-Q2(3)">Answer to Q2(3)<a class="anchor-link" href="#Answer-to-Q2(3)">&#182;</a></h3><p>No. The following shows one example that the distributive rule doesn't hold when x = 1/3, y = 0.1 and a = 10.0. This is also due to the rounding inaccuracy.</p>
 
 </div>
 </div>
@@ -12047,7 +12047,7 @@ false
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[20]:</div>
+<div class="prompt input_prompt">In&nbsp;[6]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-julia"><pre><span></span><span class="n">a</span> <span class="o">=</span> <span class="mf">0.0</span>
@@ -12119,7 +12119,7 @@ false
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[23]:</div>
+<div class="prompt input_prompt">In&nbsp;[7]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-julia"><pre><span></span><span class="k">function</span><span class="nf"> g</span><span class="p">(</span><span class="n">k</span><span class="p">)</span>
@@ -12138,7 +12138,7 @@ false
 <div class="output">
 
 
-<div class="output_area"><div class="prompt output_prompt">Out[23]:</div>
+<div class="output_area"><div class="prompt output_prompt">Out[7]:</div>
 
 
 <div class="output_text output_subarea output_execute_result">
@@ -12153,7 +12153,7 @@ false
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[24]:</div>
+<div class="prompt input_prompt">In&nbsp;[8]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-julia"><pre><span></span><span class="c"># With input type Int64</span>
@@ -12173,14 +12173,14 @@ false
 <div class="output_area"><div class="prompt"></div>
 <div class="output_subarea output_stream output_stdout output_text">
 <pre>
-define i64 @julia_g_64797(i64) #0 !dbg !5 {
+define i64 @julia_g_63063(i64) #0 !dbg !5 {
 top:
   %1 = mul i64 %0, 9765625
   %2 = add i64 %1, -2441406
   ret i64 %2
 }
 
-define double @julia_g_64798(double) #0 !dbg !5 {
+define double @julia_g_63065(double) #0 !dbg !5 {
 top:
   %1 = fmul double %0, 5.000000e+00
   %2 = fadd double %1, -1.000000e+00
@@ -12224,7 +12224,7 @@ top:
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[25]:</div>
+<div class="prompt input_prompt">In&nbsp;[9]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-julia"><pre><span></span><span class="k">function</span><span class="nf"> g_fastmath</span><span class="p">(</span><span class="n">k</span><span class="p">)</span>  
@@ -12243,7 +12243,7 @@ top:
 <div class="output">
 
 
-<div class="output_area"><div class="prompt output_prompt">Out[25]:</div>
+<div class="output_area"><div class="prompt output_prompt">Out[9]:</div>
 
 
 <div class="output_text output_subarea output_execute_result">
@@ -12329,7 +12329,7 @@ top:
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[8]:</div>
+<div class="prompt input_prompt">In&nbsp;[11]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-julia"><pre><span></span><span class="n">x</span> <span class="o">=</span> <span class="mf">0.990</span>
@@ -12345,7 +12345,7 @@ top:
 <div class="output">
 
 
-<div class="output_area"><div class="prompt output_prompt">Out[8]:</div>
+<div class="output_area"><div class="prompt output_prompt">Out[11]:</div>
 
 
 <div class="output_text output_subarea output_execute_result">
@@ -12370,7 +12370,7 @@ top:
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[9]:</div>
+<div class="prompt input_prompt">In&nbsp;[12]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-julia"><pre><span></span><span class="k">using</span> <span class="n">Plots</span>
@@ -12383,7 +12383,7 @@ top:
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[10]:</div>
+<div class="prompt input_prompt">In&nbsp;[13]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-julia"><pre><span></span><span class="c"># Create the vector</span>
@@ -12403,7 +12403,7 @@ top:
 <div class="output">
 
 
-<div class="output_area"><div class="prompt output_prompt">Out[10]:</div>
+<div class="output_area"><div class="prompt output_prompt">Out[13]:</div>
 
 
 <div class="output_png output_subarea output_execute_result">
@@ -12520,7 +12520,7 @@ top:
     <div class="input_area">
 <div class=" highlight hl-julia"><pre><span></span><span class="c"># Vectorization</span>
 <span class="k">function</span><span class="nf"> h_vectorization</span><span class="p">(</span><span class="n">n</span><span class="p">)</span>
-    <span class="n">I</span> <span class="o">=</span> <span class="mi">1</span> <span class="o">./</span> <span class="n">broadcast</span><span class="p">(</span><span class="o">+</span><span class="p">,</span> <span class="p">(</span><span class="n">collect</span><span class="p">(</span><span class="mf">0.0</span><span class="p">:</span><span class="n">n</span><span class="o">-</span><span class="mi">1</span><span class="p">))</span><span class="o">&#39;</span><span class="p">,</span> <span class="n">collect</span><span class="p">(</span><span class="mi">1</span><span class="p">:</span><span class="n">n</span><span class="p">))</span>
+    <span class="n">I</span> <span class="o">=</span> <span class="mi">1</span> <span class="o">./</span> <span class="n">broadcast</span><span class="p">(</span><span class="o">+</span><span class="p">,</span> <span class="p">(</span><span class="n">collect</span><span class="p">(</span><span class="mf">0.0</span><span class="p">:</span><span class="n">n</span> <span class="o">-</span> <span class="mi">1</span><span class="p">))</span><span class="o">&#39;</span><span class="p">,</span> <span class="n">collect</span><span class="p">(</span><span class="mi">1</span><span class="p">:</span><span class="n">n</span><span class="p">))</span>
     <span class="n">I</span>
 <span class="k">end</span>
 </pre></div>
@@ -12653,14 +12653,14 @@ top:
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="Answer-to-Q5(2)">Answer to Q5(2)<a class="anchor-link" href="#Answer-to-Q5(2)">&#182;</a></h3><p>We can see the simple looping function is actually most efficient.</p>
+<h3 id="Answer-to-Q5(2)">Answer to Q5(2)<a class="anchor-link" href="#Answer-to-Q5(2)">&#182;</a></h3><p>We can see the simple looping function is actually most efficient. The memory usage for all methods are high, because in the function we need to first allocate an 1000 * 1000 array, which takes up most memory.</p>
 
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[54]:</div>
+<div class="prompt input_prompt">In&nbsp;[20]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-julia"><pre><span></span><span class="k">using</span> <span class="n">BenchmarkTools</span>
@@ -12670,24 +12670,10 @@ top:
 </div>
 </div>
 
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area"><div class="prompt"></div>
-<div class="output_subarea output_stream output_stderr output_text">
-<pre><span class="ansi-cyan-intense-fg ansi-bold">INFO: </span><span class="ansi-cyan-fg">Precompiling module BenchmarkTools.
-</span></pre>
-</div>
-</div>
-
-</div>
-</div>
-
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[81]:</div>
+<div class="prompt input_prompt">In&nbsp;[29]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-julia"><pre><span></span><span class="p">@</span><span class="n">benchmark</span> <span class="n">h</span><span class="p">(</span><span class="mi">1000</span><span class="p">)</span>
@@ -12701,7 +12687,7 @@ top:
 <div class="output">
 
 
-<div class="output_area"><div class="prompt output_prompt">Out[81]:</div>
+<div class="output_area"><div class="prompt output_prompt">Out[29]:</div>
 
 
 <div class="output_text output_subarea output_execute_result">
@@ -12709,12 +12695,12 @@ top:
   memory estimate:  7.63 MiB
   allocs estimate:  2
   --------------
-  minimum time:     4.089 ms (0.00% GC)
-  median time:      4.462 ms (0.00% GC)
-  mean time:        5.588 ms (20.45% GC)
-  maximum time:     17.656 ms (38.50% GC)
+  minimum time:     4.110 ms (0.00% GC)
+  median time:      4.562 ms (0.00% GC)
+  mean time:        5.606 ms (19.82% GC)
+  maximum time:     10.571 ms (34.37% GC)
   --------------
-  samples:          893
+  samples:          890
   evals/sample:     1</pre>
 </div>
 
@@ -12726,7 +12712,7 @@ top:
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[80]:</div>
+<div class="prompt input_prompt">In&nbsp;[28]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-julia"><pre><span></span><span class="p">@</span><span class="n">benchmark</span> <span class="n">h_comprehension</span><span class="p">(</span><span class="mi">1000</span><span class="p">)</span>
@@ -12740,7 +12726,7 @@ top:
 <div class="output">
 
 
-<div class="output_area"><div class="prompt output_prompt">Out[80]:</div>
+<div class="output_area"><div class="prompt output_prompt">Out[28]:</div>
 
 
 <div class="output_text output_subarea output_execute_result">
@@ -12748,12 +12734,12 @@ top:
   memory estimate:  47.21 MiB
   allocs estimate:  1002028
   --------------
-  minimum time:     28.916 ms (21.99% GC)
-  median time:      34.124 ms (23.51% GC)
-  mean time:        52.110 ms (49.25% GC)
-  maximum time:     212.657 ms (85.84% GC)
+  minimum time:     28.689 ms (20.54% GC)
+  median time:      31.306 ms (21.30% GC)
+  mean time:        49.463 ms (50.08% GC)
+  maximum time:     152.435 ms (83.80% GC)
   --------------
-  samples:          96
+  samples:          102
   evals/sample:     1</pre>
 </div>
 
@@ -12765,7 +12751,7 @@ top:
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[93]:</div>
+<div class="prompt input_prompt">In&nbsp;[30]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-julia"><pre><span></span><span class="p">@</span><span class="n">benchmark</span> <span class="n">h_vectorization</span><span class="p">(</span><span class="mi">1000</span><span class="p">)</span>
@@ -12779,7 +12765,7 @@ top:
 <div class="output">
 
 
-<div class="output_area"><div class="prompt output_prompt">Out[93]:</div>
+<div class="output_area"><div class="prompt output_prompt">Out[30]:</div>
 
 
 <div class="output_text output_subarea output_execute_result">
@@ -12787,12 +12773,12 @@ top:
   memory estimate:  15.27 MiB
   allocs estimate:  8
   --------------
-  minimum time:     4.214 ms (0.00% GC)
-  median time:      7.042 ms (37.34% GC)
-  mean time:        6.783 ms (33.03% GC)
-  maximum time:     10.779 ms (41.29% GC)
+  minimum time:     4.231 ms (0.00% GC)
+  median time:      7.287 ms (36.65% GC)
+  mean time:        7.199 ms (34.65% GC)
+  maximum time:     110.746 ms (95.81% GC)
   --------------
-  samples:          736
+  samples:          693
   evals/sample:     1</pre>
 </div>
 
@@ -12807,13 +12793,14 @@ top:
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="Answer-to-Q5(3)">Answer to Q5(3)<a class="anchor-link" href="#Answer-to-Q5(3)">&#182;</a></h3>
+<h3 id="Answer-to-Q5(3)">Answer to Q5(3)<a class="anchor-link" href="#Answer-to-Q5(3)">&#182;</a></h3><p>From the fllowing, we can see different rounding modes could lead to different results.</p>
+
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[17]:</div>
+<div class="prompt input_prompt">In&nbsp;[31]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-julia"><pre><span></span><span class="n">setrounding</span><span class="p">(</span><span class="kt">Float64</span><span class="p">,</span> <span class="n">RoundDown</span><span class="p">)</span> <span class="k">do</span>
@@ -13022,14 +13009,15 @@ $</p>
 <p>Let $\mathbf{M}$ be a matrix comprising the four blocks: $\mathbf{A}$, $\mathbf{U}$, $\mathbf{V}^T$, $\mathbf{I_{m}}$</p>
 <p>$
 \begin{align*}
-    \mathbf{M} &= 
-\begin{pmatrix}
+    \text{det}(\mathbf{M}) &= 
+\text{det}\begin{pmatrix}
     \mathbf{A} & \mathbf{-U} \\
     \mathbf{V}^T & \mathbf{I}_{m} 
 \end{pmatrix}\text{, According to the block matrix formula, we can have the following} \\ 
-&= \text{det}(\mathbf{A})\text{det}(\mathbf{I}_{m}-\mathbf{V}^T\mathbf{A}^{-1}(-\mathbf{U})) \\\\
-\mathbf{M} &= 
-\begin{pmatrix}
+&= \text{det}(\mathbf{A})\text{det}(\mathbf{I}_{m}-\mathbf{V}^T\mathbf{A}^{-1}(-\mathbf{U})) \\
+&=  \text{det}(\mathbf{A}) \text{det}(\mathbf{I}_m + \mathbf{V}^T \mathbf{A}^{-1} \mathbf{U}) \\ \\
+\text{det}(\mathbf{M}) &= 
+\text{det}\begin{pmatrix}
     \mathbf{A} & \mathbf{-U} \\
     \mathbf{V}^T & \mathbf{I}_{m} 
     \end{pmatrix}\text{, According to the block matrix formula, we can have the following} \\ 
@@ -13041,6 +13029,19 @@ $</p>
 
 </div>
 </div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-julia"><pre><span></span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
 </div>
     </div>
   </div>
