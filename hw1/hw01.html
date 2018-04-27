@@ -12520,8 +12520,8 @@ top:
     <div class="input_area">
 <div class=" highlight hl-julia"><pre><span></span><span class="c"># Vectorization</span>
 <span class="k">function</span><span class="nf"> h_vectorization</span><span class="p">(</span><span class="n">n</span><span class="p">)</span>
-    <span class="n">I</span> <span class="o">=</span> <span class="mi">1</span> <span class="o">./</span> <span class="n">broadcast</span><span class="p">(</span><span class="o">+</span><span class="p">,</span> <span class="p">(</span><span class="n">collect</span><span class="p">(</span><span class="mf">0.0</span><span class="p">:</span><span class="n">n</span> <span class="o">-</span> <span class="mi">1</span><span class="p">))</span><span class="o">&#39;</span><span class="p">,</span> <span class="n">collect</span><span class="p">(</span><span class="mi">1</span><span class="p">:</span><span class="n">n</span><span class="p">))</span>
-    <span class="n">I</span>
+    <span class="n">H</span> <span class="o">=</span> <span class="mi">1</span> <span class="o">./</span> <span class="n">broadcast</span><span class="p">(</span><span class="o">+</span><span class="p">,</span> <span class="p">(</span><span class="n">collect</span><span class="p">(</span><span class="mf">0.0</span><span class="p">:</span><span class="n">n</span> <span class="o">-</span> <span class="mi">1</span><span class="p">))</span><span class="o">&#39;</span><span class="p">,</span> <span class="n">collect</span><span class="p">(</span><span class="mi">1</span><span class="p">:</span><span class="n">n</span><span class="p">))</span>
+    <span class="n">H</span>
 <span class="k">end</span>
 </pre></div>
 
@@ -12673,7 +12673,7 @@ top:
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[29]:</div>
+<div class="prompt input_prompt">In&nbsp;[24]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-julia"><pre><span></span><span class="p">@</span><span class="n">benchmark</span> <span class="n">h</span><span class="p">(</span><span class="mi">1000</span><span class="p">)</span>
@@ -12687,7 +12687,7 @@ top:
 <div class="output">
 
 
-<div class="output_area"><div class="prompt output_prompt">Out[29]:</div>
+<div class="output_area"><div class="prompt output_prompt">Out[24]:</div>
 
 
 <div class="output_text output_subarea output_execute_result">
@@ -12695,12 +12695,12 @@ top:
   memory estimate:  7.63 MiB
   allocs estimate:  2
   --------------
-  minimum time:     4.110 ms (0.00% GC)
-  median time:      4.562 ms (0.00% GC)
-  mean time:        5.606 ms (19.82% GC)
-  maximum time:     10.571 ms (34.37% GC)
+  minimum time:     4.097 ms (0.00% GC)
+  median time:      4.419 ms (0.00% GC)
+  mean time:        5.471 ms (19.82% GC)
+  maximum time:     9.768 ms (42.74% GC)
   --------------
-  samples:          890
+  samples:          912
   evals/sample:     1</pre>
 </div>
 
@@ -12712,7 +12712,7 @@ top:
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[28]:</div>
+<div class="prompt input_prompt">In&nbsp;[25]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-julia"><pre><span></span><span class="p">@</span><span class="n">benchmark</span> <span class="n">h_comprehension</span><span class="p">(</span><span class="mi">1000</span><span class="p">)</span>
@@ -12726,7 +12726,7 @@ top:
 <div class="output">
 
 
-<div class="output_area"><div class="prompt output_prompt">Out[28]:</div>
+<div class="output_area"><div class="prompt output_prompt">Out[25]:</div>
 
 
 <div class="output_text output_subarea output_execute_result">
@@ -12734,12 +12734,12 @@ top:
   memory estimate:  47.21 MiB
   allocs estimate:  1002028
   --------------
-  minimum time:     28.689 ms (20.54% GC)
-  median time:      31.306 ms (21.30% GC)
-  mean time:        49.463 ms (50.08% GC)
-  maximum time:     152.435 ms (83.80% GC)
+  minimum time:     28.546 ms (21.30% GC)
+  median time:      31.768 ms (20.89% GC)
+  mean time:        48.632 ms (48.63% GC)
+  maximum time:     150.391 ms (81.53% GC)
   --------------
-  samples:          102
+  samples:          103
   evals/sample:     1</pre>
 </div>
 
@@ -12751,7 +12751,7 @@ top:
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[30]:</div>
+<div class="prompt input_prompt">In&nbsp;[26]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-julia"><pre><span></span><span class="p">@</span><span class="n">benchmark</span> <span class="n">h_vectorization</span><span class="p">(</span><span class="mi">1000</span><span class="p">)</span>
@@ -12765,7 +12765,7 @@ top:
 <div class="output">
 
 
-<div class="output_area"><div class="prompt output_prompt">Out[30]:</div>
+<div class="output_area"><div class="prompt output_prompt">Out[26]:</div>
 
 
 <div class="output_text output_subarea output_execute_result">
@@ -12773,12 +12773,12 @@ top:
   memory estimate:  15.27 MiB
   allocs estimate:  8
   --------------
-  minimum time:     4.231 ms (0.00% GC)
-  median time:      7.287 ms (36.65% GC)
-  mean time:        7.199 ms (34.65% GC)
-  maximum time:     110.746 ms (95.81% GC)
+  minimum time:     4.213 ms (0.00% GC)
+  median time:      7.258 ms (38.46% GC)
+  mean time:        7.112 ms (35.55% GC)
+  maximum time:     106.104 ms (95.81% GC)
   --------------
-  samples:          693
+  samples:          702
   evals/sample:     1</pre>
 </div>
 
@@ -12800,7 +12800,7 @@ top:
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[31]:</div>
+<div class="prompt input_prompt">In&nbsp;[27]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-julia"><pre><span></span><span class="n">setrounding</span><span class="p">(</span><span class="kt">Float64</span><span class="p">,</span> <span class="n">RoundDown</span><span class="p">)</span> <span class="k">do</span>
@@ -12939,25 +12939,22 @@ $</p>
 and $\mathbf{Y}\mathbf{X}=\mathbf{I}$</p>
 <p>$
 \begin{align*}
-    \mathbf{X}\mathbf{Y} &amp;= \left(\mathbf{A} + \mathbf{U}^{}\mathbf{V}^T\right)
-    \left(\mathbf{A}^{-1} - \mathbf{A}^{-1} \mathbf{U} (\mathbf{I}_m + \mathbf{V}^T \mathbf{A}^{-1} \mathbf{U})^{-1} \mathbf{V}^T \mathbf{A}^{-1}\right) \
-    &amp;= \mathbf{A}^{}\mathbf{A}^{-1}-\mathbf{A}^{}\mathbf{A}^{-1}\mathbf{U}
-    \left((\mathbf{I}_m + \mathbf{V}^T \mathbf{A}^{-1} \mathbf{U})^{-1} \mathbf{V}^T \mathbf{A}^{-1}\right)</p>
-
-<pre><code>+ \mathbf{U}^{}\mathbf{V}^T\mathbf{A}^{-1} - \mathbf{U}^{}\mathbf{V}^T 
+\mathbf{X}\mathbf{Y} &= \left(\mathbf{A} + \mathbf{U}^{}\mathbf{V}^T\right)
+\left(\mathbf{A}^{-1} - \mathbf{A}^{-1} \mathbf{U} (\mathbf{I}_m + \mathbf{V}^T \mathbf{A}^{-1} \mathbf{U})^{-1} \mathbf{V}^T \mathbf{A}^{-1}\right) \\
+&= \mathbf{A}^{}\mathbf{A}^{-1}-\mathbf{A}^{}\mathbf{A}^{-1}\mathbf{U}
+\left((\mathbf{I}_m + \mathbf{V}^T \mathbf{A}^{-1} \mathbf{U})^{-1} \mathbf{V}^T \mathbf{A}^{-1}\right) + \mathbf{U}^{}\mathbf{V}^T\mathbf{A}^{-1} - \mathbf{U}^{}\mathbf{V}^T 
 \mathbf{A}^{-1} \mathbf{U}(\mathbf{I}_m + \mathbf{V}^T \mathbf{A}^{-1} \mathbf{U})^{-1} 
 \mathbf{V}^T\mathbf{A}^{-1} \\
-&amp;= \mathbf{I}_{m}-\mathbf{U}(\mathbf{I}_{m}+\mathbf{V}^T\mathbf{A}^{-1}\mathbf{U})^{-1}+
+&= \mathbf{I}_{m}-\mathbf{U}(\mathbf{I}_{m}+\mathbf{V}^T\mathbf{A}^{-1}\mathbf{U})^{-1}+
 \mathbf{U}\mathbf{V}^T\mathbf{A}^{-1}-\mathbf{U}^{}\mathbf{V}^T 
 \mathbf{A}^{-1} \mathbf{U}(\mathbf{I}_m + \mathbf{V}^T \mathbf{A}^{-1} \mathbf{U})^{-1} 
 \mathbf{V}^T\mathbf{A}^{-1}\\
-&amp;= \mathbf{I}_{m}-\mathbf{U}(\mathbf{I}_{m}+\mathbf{V}^T \mathbf{A}^{-1} \mathbf{U})^{-1}
+&= \mathbf{I}_{m}-\mathbf{U}(\mathbf{I}_{m}+\mathbf{V}^T \mathbf{A}^{-1} \mathbf{U})^{-1}
 (\mathbf{I}_{m}+\mathbf{V}^T \mathbf{A}^{-1} \mathbf{U})\mathbf{V}^T\mathbf{A}^{-1}+
 \mathbf{U}\mathbf{V}^T\mathbf{A}^{-1}\\
-&amp;= \mathbf{I}_{m}-\mathbf{U}\mathbf{V}^T\mathbf{A}^{-1}+\mathbf{U}\mathbf{V}^T\mathbf{A}^{-1} \\
-&amp;= \mathbf{I}_{m}
-</code></pre>
-<p>\end{align*} 
+&= \mathbf{I}_{m}-\mathbf{U}\mathbf{V}^T\mathbf{A}^{-1}+\mathbf{U}\mathbf{V}^T\mathbf{A}^{-1} \\
+&= \mathbf{I}_{m}
+\end{align*} 
 $</p>
 <p>Similarly, we can get $\mathbf{Y}\mathbf{X}=\mathbf{I}$, which shows the <strong>Woodbury formula</strong></p>
 
@@ -13029,19 +13026,6 @@ $</p>
 
 </div>
 </div>
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-julia"><pre><span></span>
-</pre></div>
-
-</div>
-</div>
-</div>
-
 </div>
     </div>
   </div>
